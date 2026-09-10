@@ -1489,6 +1489,10 @@ class Task(DAPBase):
         event_type = message.get('event', '')
         body = message.get('body', {})
 
+        # Pipeline events count as dev-task activity; deploy uses ttl as a run window.
+        if self._run_kind == 'dev' and event_type.startswith('apaevt_'):
+            self.reset_idle_timer()
+
         # Handle service state changes
         if event_type == 'apaevt_status_state':
             service_up = body.get('service', False)
@@ -1519,8 +1523,8 @@ class Task(DAPBase):
             )
 
         elif event_type == 'apaevt_exit':
-            # Get the exit info
-            exit_code = body.get('exit_code', 1)
+            # exitCode is the spelling every emitter in dap/transport_stdio.py writes.
+            exit_code = body.get('exitCode', 1)
             exit_message = body.get('message', 'Task exited unexpectedly')
 
             # Save it
