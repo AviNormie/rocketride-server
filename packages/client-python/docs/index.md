@@ -463,6 +463,11 @@ Returned by `await client.pipe(...)`. One streaming upload: **open** -> **write*
 | `__aenter__` | `async def __aenter__(self)`                           | `self`            | Enters context; calls `open()`.                    |
 | `__aexit__`  | `async def __aexit__(self, exc_type, exc_val, exc_tb)` | -                 | Exits context; calls `close()`.                    |
 
+`open()` retries once automatically if it hits a transient "Connect call
+failed" while the pipeline's data listener is still starting up (worst case
+adds ~1.75s); a `PipeException` from `open()` means it kept failing past that
+retry budget.
+
 ---
 
 ## Question
