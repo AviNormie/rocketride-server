@@ -2,7 +2,7 @@
   "name": "@rocketride/aparavi-ui",
   "version": "1.0.0",
   "private": true,
-  "description": "Aparavi AQL Chat — natural-language query interface for Aparavi data",
+  "description": "Aparavi AQL Chat \u2014 natural-language query interface for Aparavi data",
   "license": "MIT",
   "appManifest": {
     "id": "rocketride.aparavi",

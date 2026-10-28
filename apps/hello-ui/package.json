@@ -2,7 +2,7 @@
   "name": "@rocketride/hello-ui",
   "version": "1.2.0",
   "private": true,
-  "description": "RocketRide Hello — OSS landing page and dashboard",
+  "description": "RocketRide Hello \u2014 OSS landing page and dashboard",
   "license": "MIT",
   "appManifest": {
     "id": "rocketride.hello",
