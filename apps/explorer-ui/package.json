@@ -23,9 +23,9 @@
     ]
   },
   "scripts": {
-    "build": "rsbuild build",
-    "build:prod": "rsbuild build --env-mode production",
-    "dev": "rsbuild dev",
+    "build": "node init && rsbuild build",
+    "build:prod": "node init && rsbuild build --env-mode production",
+    "dev": "node init && rsbuild dev",
     "typecheck": "tsc --noEmit"
   },
   "browserslist": [

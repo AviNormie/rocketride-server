@@ -12,9 +12,9 @@
   "description": "RocketRide Shell \u2014 Module Federation host with dynamic app loading",
   "license": "MIT",
   "scripts": {
-    "start": "pnpm rsbuild dev --env-mode development",
-    "build": "pnpm rsbuild build --env-mode development",
-    "build:prod": "pnpm rsbuild build --env-mode production"
+    "start": "node init && pnpm rsbuild dev --env-mode development",
+    "build": "node init && pnpm rsbuild build --env-mode development",
+    "build:prod": "node init && pnpm rsbuild build --env-mode production"
   },
   "browserslist": [
     "chrome >= 81",

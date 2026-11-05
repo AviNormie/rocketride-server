@@ -24,8 +24,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "node esbuild.js --production && tsc -p tsconfig.types.json",
-    "build:dev": "node esbuild.js && tsc -p tsconfig.types.json",
+    "build": "node init && node esbuild.js --production && tsc -p tsconfig.types.json",
+    "build:dev": "node init && node esbuild.js && tsc -p tsconfig.types.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "jest",
     "test:coverage": "jest --coverage",

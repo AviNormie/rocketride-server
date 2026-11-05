@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "node init && vite build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },

@@ -37,9 +37,9 @@
     "directory": "packages/n8n-nodes"
   },
   "scripts": {
-    "build": "n8n-node build",
-    "build:watch": "tsc --watch",
-    "dev": "n8n-node dev",
+    "build": "node init && n8n-node build",
+    "build:watch": "node init && tsc --watch",
+    "dev": "node init && n8n-node dev",
     "lint": "n8n-node lint",
     "lint:fix": "n8n-node lint --fix",
     "release": "n8n-node release",
